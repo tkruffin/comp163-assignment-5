@@ -17,20 +17,43 @@ print()
 print(f"Steps: {step_count}") # prints the amount of steps took 
 
 # challenge 2: Prime number  checker
-print("\n=== Challenge 2: Prime Number Checker ===")
 
-new_number = int(input("Enter a number: "))
+print("\n=== Challenge 2: Prime Number Checker ===") # prints the header for challenge 2 
 
-print(f"Testing divisors from 2 to {new_number-1}...")
+n = int(input("Enter a number: ")) # prompts user to enter a number 
 
-prime = True
+print(f"Testing divisors from 2 to {n-1}...") # testing if any number from 2 to n-1 divides evenly into n  
 
-for i in range(2, new_number):
-    if new_number % i ==0:
-        print(f"{new_number} is not prime (divisible by {i})")
-        prime = False
-        break
+prime = True # states that n is prime until it enters to for loop to see if it really is 
+
+for i in range(2, n):
+    if n % i ==0:
+        print(f"{n} is not prime (divisible by {i})")
+        prime = False # makes prime false because it it not a prime number 
+        break # ends the for loop 
 if prime:
-    print(f"{new_number} is prime!")
+    print(f"{n} is prime!")
+
+# challenge 3: Multiplication table grid
+
+print("\n=== Challenge 3: Multiplication Table ===") # prints the challenge 3 header
+
+print("Multiplication Table:") # prints the multiplcation header
+
+print("   ", end="")
+for col in range(1,11):
+    print(f"{col:4}", end="")
+print()
+
+for row in range(1,11):
+    print(f"{row:2} ",end="")
+    for col in range(1,11):
+        product = row*col
+        print(f"{product:4}",end="")
+    print()
+
+
+
+
 
     
